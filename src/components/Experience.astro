@@ -1,0 +1,30 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+const EXPERIENCE = [
+  {
+    date: 'Actualmente...',
+    title: 'E-commerce on-line de Artesanía',
+    company: 'Minino Malo',
+    description:
+      'Tienda online de Artesanía y complementos de moda creada con Next.JS.',
+    link: 'https://www.mininomalo.com/',
+  },
+  {
+    date: 'Marzo 2024',
+    title: 'IT Technician Support',
+    company: 'Deliverea',
+    description:
+      'Responsable del área de Soporte técnico al cliente. Dónde principalmente resolvía problemas que llegaban a partir de un ticket.',
+  },
+]
+---
+
+<ol class='relative border-s border-gray-200 ml-3'>
+  {
+    EXPERIENCE.map((experience) => (
+      <li class='mb-10 ms-4'>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
