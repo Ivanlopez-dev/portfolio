@@ -9,6 +9,7 @@ import SocialPill from '../components/SocialPill.astro'
 import Experience from '../components/Experience.astro'
 import Briefcase from '../components/icons/Briefcase.astro'
 import CodeIcon from '../components/icons/Code.astro'
+import Projects from '../components/Projects.astro'
 ---
 
 <Layout
@@ -63,18 +64,19 @@ import CodeIcon from '../components/icons/Code.astro'
     </SectionContainer>
 
     <SectionContainer id='experiencia'>
-      <h2 class='text-2xl font-semibold mb-6 flex gap-x-3 items-center'>
+      <h2 class='text-3xl font-semibold mb-6 flex gap-x-3 items-center'>
         <Briefcase class='size-7' />
         Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id='experiencia'>
-      <h2 class='text-2xl font-semibold mb-6 flex gap-x-3 items-center'>
+    <SectionContainer id='proyectos'>
+      <h2 class='text-3xl font-semibold mb-6 flex gap-x-3 items-center'>
         <CodeIcon class='size-7' />
         Proyectos
       </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

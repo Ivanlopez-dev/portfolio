@@ -1,0 +1,55 @@
+---
+import NextJS from './icons/NextJS.astro'
+import Tailwind from './icons/Tailwind.astro'
+
+const TAGS = {
+  NEXT: {
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
+    icon: Tailwind,
+  },
+}
+
+const PROJECTS = [
+  {
+    title: 'Minino Malo -  Tienda online de ropa y complementos Artesanales',
+    description:
+      'Creado desde cero con Next.js y Tailwind CSS. Flujo completo de usuarios, carrito y pasarela de pago. También notificaciones vía email para la creación del usuario, cuando se realice la compra se recibe email del Pedido y en un futuro también para el seguimiento del Pedido.',
+    link: 'https://mininomalo.com',
+    github: '#',
+    image: '/projects/mininomalo.webp',
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+]
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class='text-2xl font-semibold text-yellow-200 mb-2'>{title}</h3>
+      <p class='text-lg mb-4 text-pretty'>{description}</p>
+      <ul class='flex gap-x-2 flex-row'>
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class='size-4' />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class='rounded shadow-2xl shadow-white/10'
+        src={image}
+        alt={`Imagen del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
