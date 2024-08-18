@@ -21,36 +21,33 @@ const { title, company, description, link, date } = Astro.props
   >{date}</time
 >
 <h3 class='text-xl font-bold text-yellow-200 mt-2'>{title}</h3>
-<h4 class='font-semibold text-xl text-gray-600 dark:text-white'>
+<h4 class='mb-4 font-semibold text-lg text-white'>
   {company}
 </h4>
 
-<div
-  class='relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3'
->
+<p class='mb-4 text-base font-normal text-gray-200 text-pretty'>
   {description}
-  {
-    link && (
-      <LinkInline href={link}>
-        Saber más{' '}
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          class='w-5 icon icon-tabler icon-tabler-chevron-right'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          stroke-width='2'
-          stroke='currentColor'
-          fill='none'
-          stroke-linecap='round'
-          stroke-linejoin='round'
-        >
-          <>
-            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-            <path d='M9 6l6 6l-6 6' />
-          </>
-        </svg>
-      </LinkInline>
-    )
-  }
-</div>
+</p>
+{
+  link && (
+    <LinkInline href={link}>
+      Saber más{' '}
+      <svg
+        class='w-5 icon icon-tabler icon-tabler-chevron-right'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        stroke-width='2'
+        stroke='currentColor'
+        fill='none'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      >
+        <>
+          <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+          <path d='M9 6l6 6l-6 6' />
+        </>
+      </svg>
+    </LinkInline>
+  )
+}
