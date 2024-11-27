@@ -26,9 +26,9 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: 'Minino Malo -  Ecommerce de Bolsos Artesanales',
+    title: 'Minino Malo -  Ecommerce de Artesanía',
     description:
-      'Tienda online creada desde cero con Next.js, TypeScript y Tailwind CSS. Flujo de usuarios completo, carrito y pasarela de pago. También notificaciones vía email para la creación del usuario, cuando se realice la compra se recibe email del Pedido y en un futuro también para el seguimiento del Pedido.',
+      'Tienda online creada desde cero con Next.js, TypeScript y Tailwind CSS. Flujo de usuarios, carrito y pasarela de pago con PayPal. También tiene un pequeño panel de administrador, dónde si tienes el rol adecuado, tienes acceso a Crear productos, editarlos y comprobar los Pedidos de todos los clientes.',
     link: 'https://mininomalo.com',
     github: '',
     image: '/projects/mininomalo.webp',
@@ -43,7 +43,7 @@ const PROJECTS = [
       <h3 class='text-2xl font-semibold text-yellow-200 mb-2'>{title}</h3>
       <p class='text-lg mb-4 text-pretty'>{description}</p>
       <ul class='flex gap-x-2 flex-row'>
-        {tags.map((tag) => (
+        {tags.map(tag => (
           <li>
             <span
               class={`flex gap-x-2 rounded-full text-xs mb-2 ${tag.class} py-1 px-2`}
